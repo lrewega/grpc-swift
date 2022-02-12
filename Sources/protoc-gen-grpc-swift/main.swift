@@ -137,7 +137,7 @@ func main() throws {
 
   // return everything to the caller
   let serializedResponse = try response.serializedData()
-  Stdout.write(bytes: serializedResponse)
+  FileHandle.standardOutput.write(serializedResponse)
 }
 
 do {
